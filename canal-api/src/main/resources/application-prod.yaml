@@ -1,0 +1,32 @@
+server:
+        port: 8099  #配置端口
+        address : localhost
+        session-timeout: 30
+        tomcat.max-threads: 0
+        tomcat.uri-encoding: UTF-8
+
+spring:
+        application:
+                name: canal-svr
+        devtools:
+                        restart:
+                                enabled: true #热部署生效
+                                additional-paths: canal-svr/src/main/java  #设置重启的目录
+          #                      exclude: WEB-INF/**   #classpath目录下的WEB-INF文件夹内容修改不重启
+
+search:
+        index:
+              address: http://localhost:8080/indexMap.
+logging:
+        level:
+          com:
+              abin:
+                   lee:
+                      canal:
+                              svr:
+                                   api:
+                                        service: debug
+              alibaba:
+                    druid: debug
+
+
