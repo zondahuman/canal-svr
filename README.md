@@ -81,7 +81,14 @@ C:\Users\tinkpad>d:
 D:\Sys\Database\mysql-5.6.26-winx64\bin>mysqlbinlog.exe D:\Sys\Database\mysql-5.6.26-winx64\data\mysql-bin.000001
 
 
+show variables like '%binlog_format%' ;
+show variables like '%log_bin%' ;
+show variables like '%server_id%' ;
+
+show variables ;
 
 
 
+# Support Version
+目前canal测试已支持mysql 5.7.13/5.6.10及以下的版本，mariadb 5.5.35和10.0.7(理论上可支持以下版本)
 

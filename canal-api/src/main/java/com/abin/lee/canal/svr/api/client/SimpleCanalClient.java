@@ -36,6 +36,7 @@ public class SimpleCanalClient {
     public void connectSingle() {
 //        String canalHost = "172.16.2.132";
         String canalHost = "127.0.0.1";
+//        String canalHost = "127.0.0.1";
 //        String canalHost = "localhost";
         // 创建链接
         CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress(canalHost,
@@ -46,7 +47,7 @@ public class SimpleCanalClient {
             connector.connect();
             connector.subscribe(SchemaEnums.deal + "." + TableEnums.business_info);
             connector.rollback();
-            int totalEmtryCount = 120;
+            int totalEmtryCount = 1200;
             while (emptyCount < totalEmtryCount) {
                 Message message = connector.getWithoutAck(batchSize); // 获取指定数量的数据
                 long batchId = message.getId();

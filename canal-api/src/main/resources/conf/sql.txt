@@ -34,7 +34,7 @@ CREATE TABLE `team` (
 
 
 
-* INSERT INTO `team`(`team_name`, `create_time`, `update_time`, `version`) VALUES ('abin4', now(),  now(), 0);
+INSERT INTO `team`(`team_name`, `create_time`, `update_time`, `version`) VALUES ('abin4', now(),  now(), 0);
 
-* INSERT INTO `business_info`(`user_id`, `longitude`, `latitude`, `business_name`, `business_price`, `province_name`, `city_name`, `district_name`, `category`, `field1`, `field2`, `flag`, `create_time`, `update_time`, `version`) VALUES ('11123', '116.480979', '39.827404', '海底捞', 450.05, '北京', '北京市', '朝阳区', 'COMMON', '二狗', '狗蛋', 'PAYED', now(), now(), 0);
+INSERT INTO `business_info`(`user_id`, `longitude`, `latitude`, `business_name`, `business_price`, `province_name`, `city_name`, `district_name`, `category`, `field1`, `field2`, `flag`, `create_time`, `update_time`, `version`) VALUES ('11123', '116.480979', '39.827404', '海底捞', 450.05, '北京', '北京市', '朝阳区', 'COMMON', '二狗', '狗蛋', 'PAYED', now(), now(), 0);
 
