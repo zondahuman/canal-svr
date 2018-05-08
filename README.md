@@ -92,3 +92,5 @@ show variables ;
 # Support Version
 目前canal测试已支持mysql 5.7.13/5.6.10及以下的版本，mariadb 5.5.35和10.0.7(理论上可支持以下版本)
 
+Canal BinlogChange(mariadb5/10):
+http://agapple.iteye.com/blog/2007284
