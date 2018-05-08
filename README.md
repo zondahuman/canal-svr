@@ -66,6 +66,10 @@ git push -u origin v1.0.0_elasticsearh_springboot2.0.0
 
 
 
+show binary logs;
+show binlog events;
+show master status;
+
 
 
 

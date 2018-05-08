@@ -34,8 +34,8 @@ public class SimpleCanalClient {
 
     @PostConstruct
     public void connectSingle() {
-        String canalHost = "172.16.2.132";
-//        String canalHost = "127.0.0.1";
+//        String canalHost = "172.16.2.132";
+        String canalHost = "127.0.0.1";
 //        String canalHost = "localhost";
         // 创建链接
         CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress(canalHost,
