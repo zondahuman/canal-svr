@@ -65,15 +65,20 @@ git tag v1.0.0_elasticsearh_springboot2.0.0
 git push -u origin v1.0.0_elasticsearh_springboot2.0.0
 
 
+# Show Binlog
 
 show binary logs;
 show binlog events;
 show master status;
 
+SHOW BINLOG EVENTS IN 'mysql-bin.000002' FROM 4 LIMIT 2 ;
+
+SHOW BINLOG EVENTS IN 'mysql-bin.000005';
 
 
-
-
+C:\Users\tinkpad>cd D:\Sys\Database\mysql-5.6.26-winx64\bin
+C:\Users\tinkpad>d:
+D:\Sys\Database\mysql-5.6.26-winx64\bin>mysqlbinlog.exe D:\Sys\Database\mysql-5.6.26-winx64\data\mysql-bin.000001
 
 
 
