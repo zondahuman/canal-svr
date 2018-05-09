@@ -2,7 +2,47 @@ CREATE USER canal IDENTIFIED BY 'canal';
 -- GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%';
 GRANT ALL PRIVILEGES ON *.* TO 'canal'@'%' ;
 FLUSH PRIVILEGES;
-
 show grants for 'canal' ;
 
 
+create user canal@127.0.0.1;
+update mysql.user set authentication_string = password('canal') where user = 'canal';
+flush privileges;
+grant select, replication slave, replication client, show view on *.* to canal@127.0.0.1 identified by 'canal';
+flush privileges;
+GRANT ALL PRIVILEGES ON *.* TO canal@127.0.0.1  identified by 'canal';
+flush privileges;
+show grants for 'canal'  ;
+flush privileges;
+ SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.user;
+flush privileges;
+
+update mysql.user set authentication_string = password('canal') where user = 'canal';
+flush privileges;
+grant select, replication slave, replication client, show view on *.* to 'canal'@'localhost'identified by 'canal';
+flush privileges;
+GRANT ALL PRIVILEGES ON *.* TO 'canal'@'localhost' identified by 'canal';
+flush privileges;
+show grants for 'canal' ;
+flush privileges;
+SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.user;
+
+
+
+show binary logs;
+show binlog events;
+show master status;
+select * from mysql.user;
+
+SHOW BINLOG EVENTS IN 'mysql-bin.000002' FROM 4 LIMIT 2 ;
+
+SHOW BINLOG EVENTS IN 'mysql-bin.000005';
+
+SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.user;
+
+
+show variables like '%binlog_format%' ;
+show variables like '%log_bin%' ;
+show variables like '%server_id%' ;
+
+show variables ;
