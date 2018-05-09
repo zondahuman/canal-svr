@@ -35,6 +35,8 @@ CREATE TABLE `team` (
 
 
 INSERT INTO `team`(`team_name`, `create_time`, `update_time`, `version`) VALUES ('abin4', now(),  now(), 0);
+UPDATE `team` SET `team_name`='abin4', `create_time`=now(), `update_time`=now(), `version`='0' WHERE (`id`='1');
 
 INSERT INTO `business_info`(`user_id`, `longitude`, `latitude`, `business_name`, `business_price`, `province_name`, `city_name`, `district_name`, `category`, `field1`, `field2`, `flag`, `create_time`, `update_time`, `version`) VALUES ('11123', '116.480979', '39.827404', '海底捞', 450.05, '北京', '北京市', '朝阳区', 'COMMON', '二狗', '狗蛋', 'PAYED', now(), now(), 0);
+UPDATE `business_info` SET `user_id`='11123', `longitude`='116.480979', `latitude`='39.827404', `business_name`='海底捞1', `business_price`='450.05', `province_name`='北京', `city_name`='北京市', `district_name`='朝阳区', `category`='COMMON', `field1`='二狗', `field2`='狗蛋', `flag`='PAYED', `create_time`=now(), `update_time`=now(), `version`='0' WHERE (`id`='1');
 
