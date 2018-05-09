@@ -1,4 +1,4 @@
-package com.abin.lee.canal.svr.api.test;
+package com.abin.lee.canal.api.mysql.test;
 
 import com.alibaba.otter.canal.client.CanalConnector;
 import com.alibaba.otter.canal.client.CanalConnectors;

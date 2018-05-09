@@ -1,4 +1,4 @@
-package com.abin.lee.canal.svr.api.test;
+package com.abin.lee.canal.api.mysql.test;
 
 /**
  * Created with IntelliJ IDEA.
@@ -8,6 +8,8 @@ package com.abin.lee.canal.svr.api.test;
  * To change this template use File | Settings | File Templates.
  */
 
+import com.abin.lee.canal.svr.api.enums.SchemaEnums;
+import com.abin.lee.canal.svr.api.enums.TableEnums;
 import com.alibaba.otter.canal.client.CanalConnector;
 import com.alibaba.otter.canal.client.CanalConnectors;
 import com.alibaba.otter.canal.protocol.CanalEntry.*;
@@ -19,7 +21,8 @@ import java.util.List;
 public class SimpleCanalClientExample {
 
     public static void main(String args[]) {
-        String canalHost = "172.16.2.132";
+//        String canalHost = "172.16.2.132";
+        String canalHost = "192.168.1.2";
 //        String canalHost = "127.0.0.1";
 //        String canalHost = "localhost";
         // 创建链接
@@ -29,9 +32,14 @@ public class SimpleCanalClientExample {
         int emptyCount = 0;
         try {
             connector.connect();
-            connector.subscribe(".*\\..*");
+//            connector.subscribe(".*\\..*");
+            connector.subscribe(SchemaEnums.deal + "." + TableEnums.business_info);
+            //下面两句是mariadb专用
+//            connector.subscribe("SET @master_binlog_checksum='@@global.binlog_checksum'");
+//            connector.subscribe("SET @mariadb_slave_capability='" + 4 + "'");
+//            connector.subscribe("binlog_flags |= BINLOG_SEND_ANNOTATE_ROWS_EVENT");
             connector.rollback();
-            int totalEmtryCount = 120;
+            int totalEmtryCount = 1200;
             while (emptyCount < totalEmtryCount) {
                 Message message = connector.getWithoutAck(batchSize); // 获取指定数量的数据
                 long batchId = message.getId();

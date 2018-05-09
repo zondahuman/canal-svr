@@ -35,7 +35,7 @@ public class SimpleCanalClient {
     @PostConstruct
     public void connectSingle() {
 //        String canalHost = "172.16.2.132";
-        String canalHost = "127.0.0.1";
+        String canalHost = "192.168.1.2";
 //        String canalHost = "127.0.0.1";
 //        String canalHost = "localhost";
         // 创建链接
