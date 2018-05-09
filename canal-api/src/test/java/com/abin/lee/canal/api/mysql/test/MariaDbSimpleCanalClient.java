@@ -21,13 +21,14 @@ import java.util.List;
 public class MariaDbSimpleCanalClient {
 
     public static void main(String args[]) {
-//        String canalHost = "172.16.2.132";
         String canalHost = "192.168.1.2";
 //        String canalHost = "127.0.0.1";
 //        String canalHost = "localhost";
+//        String destination = "example";
+        String destination = "exchange";
         // 创建链接
         CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress(canalHost,
-                11111), "example", "canal", "canal");
+                11111), "exchange", "canal", "canal");
         int batchSize = 1000;
         int emptyCount = 0;
         try {
