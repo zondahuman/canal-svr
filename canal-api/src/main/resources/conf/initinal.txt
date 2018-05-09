@@ -3,4 +3,6 @@ CREATE USER canal IDENTIFIED BY 'canal';
 GRANT ALL PRIVILEGES ON *.* TO 'canal'@'%' ;
 FLUSH PRIVILEGES;
 
-show grants for 'canal'
+show grants for 'canal' ;
+
+
