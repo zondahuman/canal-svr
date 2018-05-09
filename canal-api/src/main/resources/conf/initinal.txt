@@ -44,5 +44,6 @@ SELECT DISTINCT CONCAT('User: ''',user,'''@''',host,''';') AS query FROM mysql.u
 show variables like '%binlog_format%' ;
 show variables like '%log_bin%' ;
 show variables like '%server_id%' ;
+show variables like '%binlog_annotate_row_events%' ;
 
 show variables ;
